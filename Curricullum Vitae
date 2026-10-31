@@ -1,12 +1,10 @@
-
-
-Index · HTML
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CV – Ns. Bagaskara Dion Suparman, S.Kep</title>
+<link rel="icon" href="data:,">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#07574A;--glass:linear-gradient(160deg,rgba(4,86,74,.92),rgba(30,112,68,.9));--bd:rgba(255,255,255,.26);--tx:#FFFFFF;--mut:#D6F1E9;--cy:#DFFFF1;--vi:#F3EFFF;--am:#FFC857;--fh:Sora,"Segoe UI",system-ui,sans-serif;--sbw:238px;--g1:#0AAE96;--g2:#3DBE7A;--g3:#8CC63F}
@@ -242,9 +240,9 @@ body.editing .ed{outline-color:rgba(255,255,255,.7)}
 <button class="fab" data-act="print" aria-label="Cetak atau simpan sebagai PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/></svg><span>Cetak / PDF</span></button>
 <div id="modal" hidden></div>
 <div id="toast" role="status"></div>
- 
+
 <script id="cv-data" type="application/json">{"version":1,"profile":{"role":"Curriculum Vitae","name":"Ns. Bagaskara Dion Suparman, S.Kep","ttl":"Jember, 22 April 1995","dom":"Perum. Grand Puri Bunga Nirwana Blok California No C66, Sumbersari Jember","lulus":"FIKES Universitas Muhammadiyah Jember","photo":""},"about":"Lulusan Fakultas Ilmu Kesehatan Universitas Muhammadiyah Jember yang berpengalaman dalam praktik keperawatan dan pendidikan keperawatan. Berbekal dunia pendidikan, saya mampu mengingat dengan baik, gigih, peduli, teliti, serta memiliki kemampuan kerja sama yang baik.","phone":"081334133381","email":"bagaskaradion123@gmail.com","leg":[{"label":"STR Perawat","no":"","valid":"","file":null},{"label":"SIPP","no":"","valid":"","file":null}],"komp":["Perawat Anestesi","Perawat Penyakit Dalam","Perawat Bedah"],"soft":["Teliti","Gigih","Peduli (caring)","Kerja sama tim"],"bhs":["Indonesia (aktif)","Jawa (aktif)","Madura (aktif)","Inggris (aktif)","Jepang (aktif)"],"exp":[{"org":"SMK 4 Pancasila Ambulu, Jember","per":"2019 – 2022","items":["Guru Keperawatan (anatomi fisiologi, KDM, Komunikasi keperawatan, Konsep dasar keperawatan)","Guru Bahasa Jepang","Wali Kelas Keperawatan","Pembimbing klinik siswa praktik kerja internship.","Kepala Laboratorium","Pembimbing ekskul Bahasa Jepang","Tim Konten creator sekolah","Guru pendamping LKS (Lomba Kompetensi Siswa) tingkat Wilayah Kerja 2 Jawa Timur tahun 2021"]},{"org":"SMK 2 Pancasila Ambulu, Jember","per":"2021 – 2022","items":["Guru Kursus Bahasa Jepang"]},{"org":"RSU Universitas Muhammadiyah Jember","per":"2023 – 2026","items":["Ketua Tim Mutu (Komite Mutu)","Kepala Ruang Interna","Kepala Ruang Bedah"]}],"edu":[{"inst":"Fakultas Ilmu Kesehatan, Universitas Muhammadiyah Jember","name":"Program studi Ilmu Keperawatan","per":"2013 – 2017","file":null},{"inst":"Fakultas Ilmu Kesehatan, Universitas Muhammadiyah Jember","name":"Profesi Keperawatan (Ners)","per":"2017 – 2018","file":null}],"tr":[{"title":"Bahasa Jepang","org":"UPT BLKI Jember","year":"2019","file":null},{"title":"BTCLS & BLS","org":"EM 118 Surabaya","year":"2019","file":null},{"title":"PMKP","org":"LIPA LARSI","year":"2023","file":null},{"title":"Pelatihan Keperawatan anestesi","org":"HIPANI","year":"2026 (sampai Oktober 2026)","file":null}],"kp":{"tipe":"Penjaga yang tenang, teliti, dan peduli","desc":"Bekerja dengan teliti saat pasien paling rentan, gigih menyelesaikan tugas, dan menenangkan pasien dengan sikap peduli.","tags":["Teliti","Gigih","Peduli","Kerja sama","Tenang"],"note":"Persentase pada grafik hanya ilustrasi, bukan hasil tes psikologi resmi.","items":[{"label":"Ketelitian","pct":95,"desc":"Memeriksa obat, dosis, dan alat berulang kali sebelum tindakan.","quote":"Menjalankan checklist keselamatan pasien pada setiap tindakan."},{"label":"Kegigihan","pct":92,"desc":"Tidak mudah menyerah menghadapi shift panjang dan kasus sulit.","quote":"Menyelesaikan tugas klinis hingga tuntas dengan standar yang konsisten."},{"label":"Daya ingat & belajar","pct":90,"desc":"Cepat mengingat prosedur, protokol, dan riwayat pasien.","quote":"Menguasai SOP dan cepat beradaptasi dengan prosedur baru."},{"label":"Kepedulian (caring)","pct":90,"desc":"Menenangkan pasien yang cemas dan memperhatikan kenyamanannya.","quote":"Mendampingi pasien hingga merasa aman dan nyaman."},{"label":"Kerja sama tim","pct":88,"desc":"Berkomunikasi singkat dan jelas dengan dokter dan tim bedah.","quote":"Melakukan serah terima pasien dengan format SBAR."},{"label":"Ketenangan","pct":90,"desc":"Tetap fokus ketika kondisi pasien berubah cepat.","quote":"Terlibat dalam penanganan kegawatan sesuai protokol."},{"label":"Integritas","pct":null,"desc":"Jujur melaporkan kesalahan dan nyaris-insiden demi pembelajaran tim.","quote":""},{"label":"Ketahanan","pct":null,"desc":"Sanggup berdiri lama, jaga malam, dan bekerja berjam-jam.","quote":""},{"label":"Terus belajar","pct":null,"desc":"Mengikuti pelatihan dan perkembangan ilmu keperawatan serta anestesi.","quote":""}]},"sk":[{"label":"Office Word","pct":95,"links":null},{"label":"Office Excel","pct":95,"links":null},{"label":"Office Power Point","pct":95,"links":null},{"label":"Google Apps Script","pct":93,"links":[]},{"label":"Artificial Intelligence","pct":92,"links":null},{"label":"GitHub (Repository)","pct":90,"links":[]}],"hb":[{"label":"Bersepeda","kind":"photo","photos":[]},{"label":"Hiking & Camping Fun","kind":"photo","photos":[]},{"label":"AI Web Developer","kind":"link","url":"","links":[]}]}</script>
- 
+
 <script>
 /* ============================================================
    LINK GOOGLE DRIVE: ISI MANUAL DI SINI (edit langsung di GitHub)
@@ -264,7 +262,7 @@ const DRIVE={
  ]
 };
 </script>
- 
+
 <script>
 const TEMPLATE='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
 const KEY='cv-bagaskara-draf',$=id=>document.getElementById(id),clone=o=>JSON.parse(JSON.stringify(o));
@@ -290,7 +288,7 @@ const list=(p,t,l)=>`<div class="tgs">${get(p).map((_,i)=>`<span class="tg">${E(
 const card=(t,b,c='',id='')=>`<section class="cd ${c}"${id?` id="${id}"`:''}><h2>${t}</h2>${b}</section>`;
 const pctCtl=(i,v)=>`<span class="only-edit pc"><input type="range" min="0" max="100" data-pct="${i}" value="${v||0}" aria-label="Nilai"><input type="number" min="0" max="100" data-pct="${i}" value="${v??''}" placeholder="–" aria-label="Nilai persen">%</span>`;
 const wave=k=>{let d=k?'M0 66':'M0 40',x=0;for(;x<1600;x+=200)d+=k?` L${x+40} 66 L${x+52} 22 L${x+120} 26 L${x+132} 66 L${x+200} 66`:` L${x+60} 40 L${x+70} 33 L${x+80} 40 L${x+100} 40 L${x+108} 48 L${x+118} 6 L${x+128} 62 L${x+134} 40 L${x+160} 40 L${x+176} 30 L${x+192} 40 L${x+200} 40`;return d};
- 
+
 /* Navigasi sidebar: ikon disesuaikan dengan judul menu */
 const IC={
 home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>',
@@ -310,7 +308,7 @@ document.querySelectorAll('.pp').forEach(p=>{p.classList.remove('anim');const on
 document.querySelectorAll('.ni').forEach(b=>{const on=b.dataset.nav===k;b.classList.toggle('on',on);on?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current')});
 const n=NAV.find(x=>x[0]===k);$('tt').innerHTML=ico(k)+'<span>'+n[1]+'</span>';
 if(!still){scrollTo({top:0,behavior:'smooth'});if(innerWidth<=820)setNav(false)}}
- 
+
 const safeUrl=u=>{u=String(u||'').trim();if(!u)return'';if(!/^[a-z][a-z0-9+.-]*:/i.test(u))u='https://'+u;return /^https?:\/\//i.test(u)?u:''};
 const dt=(fp,inner)=>get(fp)?`<span class="dl" tabindex="0" role="button" data-act="view" data-p="${fp}" title="Klik untuk melihat dokumen">${inner}</span>`:inner;
 const lnk=(t,u)=>{const h=safeUrl(u);return h?`<a class="lk" href="${esc(h)}" target="_blank" rel="noopener noreferrer">${t}</a>`:t};
@@ -325,7 +323,7 @@ function observeSd(){const cs=document.querySelectorAll('.hb');
 const show=c=>c.querySelectorAll('.sd').forEach(f=>f.classList.add('in'));
 if(!('IntersectionObserver' in window)){cs.forEach(show);return}
 const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){show(en.target);io.unobserve(en.target)}}),{threshold:.15});cs.forEach(c=>io.observe(c))}
- 
+
 function render(){
 const s=state,p=s.profile,K=s.kp.items.map((x,i)=>[x,i]),G=K.filter(([x])=>x.pct!=null),X=K.filter(([x])=>x.pct==null);
 const P=(k,b)=>`<div class="pp${cur===k?' act':''}" id="p-${k}">${b}</div>`;
@@ -360,7 +358,7 @@ const mb=$('mbtn');mb.querySelector('img')?.remove();
 if(p.photo){const im=new Image();im.referrerPolicy='no-referrer';im.alt='';im.onerror=()=>im.remove();im.src=p.photo;mb.appendChild(im)}
 applyEd();redraw();observeSd();
 }
- 
+
 function redraw(){drawRadar('radar',state.kp.items,'kepribadian');drawRadar('radar-sk',state.sk,'kemampuan',480)}
 function drawRadar(id,items,name,W=360){
 const el=$(id);if(!el)return;const it=items.filter(x=>x.pct!=null),n=it.length,cx=W/2,cy=135,R=84,M=W>400?24:18;
@@ -373,24 +371,26 @@ g+=`<polygon class="rd" points="${dp.map(q=>q[0]+','+q[1]).join(' ')}"/>`+dp.map
 g+=it.map((x,i)=>{const q=pt(i,R+12),a=q[2]>.3?'start':q[2]<-.3?'end':'middle',t=x.label.length>M?x.label.slice(0,M-1)+'…':x.label;return `<text class="rl" x="${q[0]}" y="${q[1]+4+q[3]*7}" text-anchor="${a}">${esc(t)}</text>`}).join('');
 el.innerHTML=`<svg viewBox="0 0 ${W} 270" role="img" aria-label="Grafik radar ${name}" style="width:100%;display:block">${g}</svg>`;
 }
- 
+
 function applyEd(){const on=document.body.classList.contains('editing');document.querySelectorAll('.ed').forEach(e=>e.contentEditable=on)}
 let st;function save(){clearTimeout(st);st=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify({base:DATA.version,data:state}))}catch(e){toast('Penyimpanan browser penuh. Klik Unduh HTML agar perubahan tidak hilang.')}},400)}
 let tt;function toast(m){const t=$('toast');t.textContent=m;clearTimeout(tt);tt=setTimeout(()=>t.textContent='',6000)}
- 
-/* Akses pemilik: login manual username + password (hash SHA-256 dari "username:password") */
+
+/* Akses pemilik: login manual username + password.
+   CATATAN: ini hanya pengaman tampilan. Username/password terlihat di source halaman,
+   jadi jangan gunakan password yang sama dengan akun penting. Ganti nilai di bawah. */
 const USERNAME='bagaskara';
 const PASSWORD='GantiPassword#2026';
 let fails=0;
- 
+
 function grant(){
 document.body.classList.add('owner');
 try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&d.base===DATA.version){state=Object.assign(clone(DATA),d.data);applyDrive(state);render()}}catch(e){}}
- 
+
 function logout(){
 sessionStorage.removeItem('cv-cred');setEdit(false);
 document.body.classList.remove('owner');toast('Anda sudah keluar.')}
- 
+
 function loginForm(){
 const m=$('modal');
 m.innerHTML=`<form class="mb lf" id="lf"><h2>Masuk pemilik</h2>
@@ -404,9 +404,9 @@ $('lf').onsubmit=async e=>{
  if($('lu').value.trim()===USERNAME&&$('lp').value===PASSWORD){sessionStorage.setItem('cv-cred','1');closeDoc();grant();toast('Berhasil masuk. Klik "Edit CV".')}
  else{fails++;$('le').textContent='Username atau password salah.';$('lp').value='';
   await new Promise(r=>setTimeout(r,Math.min(fails,5)*1000))}}}
- 
+
 addEventListener('load',()=>{if(sessionStorage.getItem('cv-cred')==='1')grant()});
- 
+
 async function imgData(file,max,crop){
 let bm;try{bm=await createImageBitmap(file)}catch(e){throw Error('Format gambar tidak didukung. Gunakan JPG atau PNG.')}
 let sx=0,sy=0,sw=bm.width,sh=bm.height;
@@ -426,7 +426,7 @@ else if(f.type.startsWith('image/')){set(p,{name:f.name,type:'image/jpeg',data:a
 else if(f.type==='application/pdf'){if(f.size>3e6)throw Error('PDF maksimal 3 MB. Kompres dulu atau unggah sebagai foto/scan JPG.');set(p,{name:f.name,type:f.type,data:await fileData(f)})}
 else throw Error('Hanya file gambar (JPG/PNG) atau PDF.');
 save();render()}catch(err){toast(err.message)}});
- 
+
 document.addEventListener('input',e=>{const t=e.target;if(!document.body.classList.contains('editing'))return;
 if(t.dataset.pct!==undefined){const k=t.dataset.pct,x=get(k),v=t.value===''?null:Math.max(0,Math.min(100,Math.round(+t.value))),r=document.querySelector(`[data-r="${k}"]`);
 if(k.startsWith('kp')&&(x.pct==null)!==(v==null))reflow=true;x.pct=v;
@@ -436,7 +436,7 @@ if(t.classList.contains('ed')){set(t.dataset.p,t.textContent);redraw();save()}})
 document.addEventListener('focusout',e=>{const t=e.target;if(t.classList&&t.classList.contains('ed')&&document.body.classList.contains('editing')){const v=t.textContent.trim();set(t.dataset.p,v);t.textContent=v;save()}});
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('dl')&&!document.body.classList.contains('editing')){e.preventDefault();e.target.click();return}if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('ed')){e.preventDefault();e.target.blur()}if(e.key==='Escape'){closeDoc();$('mn').classList.remove('open')}});
 document.addEventListener('paste',e=>{if(e.target.classList&&e.target.classList.contains('ed')){e.preventDefault();document.execCommand('insertText',false,e.clipboardData.getData('text').replace(/\s*\n\s*/g,' '))}});
- 
+
 async function openDoc(f){const ext=/^https?:/i.test(f.data),u=ext?f.data:URL.createObjectURL(await (await fetch(f.data)).blob()),m=$('modal');
 m.innerHTML=`<div class="mb"><div class="mh"><span>${esc(f.name)}</span><a class="btn" href="${esc(f.open||u)}" target="_blank" rel="noopener">Buka di tab baru</a><button class="btn" data-act="close">Tutup</button></div>${f.type==='application/pdf'||f.type==='drive'?`<iframe src="${u}" title="Dokumen"></iframe>`:`<img src="${esc(u)}" alt="Dokumen" referrerpolicy="no-referrer">`}</div>`;m._u=ext?null:u;m.hidden=false}
 function closeDoc(){const m=$('modal');if(m._u)URL.revokeObjectURL(m._u);m._u=null;m.hidden=true;m.innerHTML=''}
@@ -446,7 +446,7 @@ const json=JSON.stringify(s).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028'
 const open='<scr'+'ipt id="cv-data" type="application/json">',a=TEMPLATE.indexOf(open)+open.length,b=TEMPLATE.indexOf('</scr'+'ipt>',a);
 const u=URL.createObjectURL(new Blob([TEMPLATE.slice(0,a)+json+TEMPLATE.slice(b)],{type:'text/html'})),l=document.createElement('a');
 l.href=u;l.download='index.html';l.click();setTimeout(()=>URL.revokeObjectURL(u),2000);toast('index.html terunduh. Unggah ke repo GitHub untuk menayangkan.')}
- 
+
 document.addEventListener('click',e=>{const lk=e.target.closest('a.lk');if(lk&&document.body.classList.contains('editing')){e.preventDefault();return}const mn=$('mn');if(!e.target.closest('#mn,#mbtn'))mn.classList.remove('open');
 const nb=e.target.closest('[data-nav]');if(nb){show(nb.dataset.nav);return}
 const b=e.target.closest('[data-act]');if(!b)return;if(b.closest('#mn'))mn.classList.remove('open');const a=b.dataset.act,p=b.dataset.p,ed=document.body.classList.contains('editing');
@@ -462,7 +462,7 @@ else if(a==='reset'){if(confirm('Buang semua perubahan dan kembali ke isi file i
 $('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeDoc()});
 buildNav();if(innerWidth>820)setNav(true);
 render();show('home',true);
- 
+
 /* Efek cahaya Tron: garis biru-putih berjalan acak mengikuti garis kotak latar */
 (function(){
 const cv=document.getElementById('tron');
@@ -525,7 +525,3 @@ size();addEventListener('resize',size);requestAnimationFrame(frame);
 </script>
 </body>
 </html>
- 
-
-
-Claude selesai menulis balasan
