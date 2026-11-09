@@ -266,8 +266,6 @@ const DRIVE={
 <script>
 const TEMPLATE='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
 const KEY='cv-bagaskara-draf',$=id=>document.getElementById(id),clone=o=>JSON.parse(JSON.stringify(o));
-const ss={get:k=>{try{return sessionStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(e){}},rm:k=>{try{sessionStorage.removeItem(k)}catch(e){}}};
-const ls={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){throw e}},rm:k=>{try{localStorage.removeItem(k)}catch(e){}}};
 const DATA=JSON.parse($('cv-data').textContent);
 const driveId=u=>{u=String(u||'').trim();const m=u.match(/\/d\/([\w-]{10,})/)||u.match(/[?&]id=([\w-]{10,})/);return m?m[1]:''};
 const imgUrl=(u,w)=>{u=String(u||'').trim();const id=driveId(u);return id?`https://drive.google.com/thumbnail?id=${id}&sz=w${w}`:(/^https:\/\//i.test(u)?u:'')};
@@ -375,7 +373,7 @@ el.innerHTML=`<svg viewBox="0 0 ${W} 270" role="img" aria-label="Grafik radar ${
 }
 
 function applyEd(){const on=document.body.classList.contains('editing');document.querySelectorAll('.ed').forEach(e=>e.contentEditable=on)}
-let st;function save(){clearTimeout(st);st=setTimeout(()=>{try{ls.set(KEY,JSON.stringify({base:DATA.version,data:state}))}catch(e){toast('Penyimpanan browser penuh. Klik Unduh HTML agar perubahan tidak hilang.')}},400)}
+let st;function save(){clearTimeout(st);st=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify({base:DATA.version,data:state}))}catch(e){toast('Penyimpanan browser penuh. Klik Unduh HTML agar perubahan tidak hilang.')}},400)}
 let tt;function toast(m){const t=$('toast');t.textContent=m;clearTimeout(tt);tt=setTimeout(()=>t.textContent='',6000)}
 
 /* Akses pemilik: login manual username + password.
@@ -387,10 +385,10 @@ let fails=0;
 
 function grant(){
 document.body.classList.add('owner');
-try{const d=JSON.parse(ls.get(KEY));if(d&&d.base===DATA.version){state=Object.assign(clone(DATA),d.data);applyDrive(state);render()}}catch(e){}}
+try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&d.base===DATA.version){state=Object.assign(clone(DATA),d.data);applyDrive(state);render()}}catch(e){}}
 
 function logout(){
-ss.rm('cv-cred');setEdit(false);
+sessionStorage.removeItem('cv-cred');setEdit(false);
 document.body.classList.remove('owner');toast('Anda sudah keluar.')}
 
 function loginForm(){
@@ -403,11 +401,11 @@ m.innerHTML=`<form class="mb lf" id="lf"><h2>Masuk pemilik</h2>
 m.hidden=false;$('lu').focus();
 $('lf').onsubmit=async e=>{
  e.preventDefault();
- if($('lu').value.trim()===USERNAME&&$('lp').value===PASSWORD){ss.set('cv-cred','1');closeDoc();grant();toast('Berhasil masuk. Klik "Edit CV".')}
+ if($('lu').value.trim()===USERNAME&&$('lp').value===PASSWORD){sessionStorage.setItem('cv-cred','1');closeDoc();grant();toast('Berhasil masuk. Klik "Edit CV".')}
  else{fails++;$('le').textContent='Username atau password salah.';$('lp').value='';
   await new Promise(r=>setTimeout(r,Math.min(fails,5)*1000))}}}
 
-addEventListener('load',()=>{if(ss.get('cv-cred')==='1')grant()});
+addEventListener('load',()=>{if(sessionStorage.getItem('cv-cred')==='1')grant()});
 
 async function imgData(file,max,crop){
 let bm;try{bm=await createImageBitmap(file)}catch(e){throw Error('Format gambar tidak didukung. Gunakan JPG atau PNG.')}
@@ -460,7 +458,7 @@ else if(a==='add'){get(p).push(TPL[b.dataset.t]());save();render()}
 else if(a==='del'){if(confirm('Hapus item ini?')){get(p).splice(+b.dataset.i,1);save();render()}}
 else if(a==='rmf'){set(p,null);save();render()}
 else if(a==='rmphoto'){state.profile.photo='';save();render()}
-else if(a==='reset'){if(confirm('Buang semua perubahan dan kembali ke isi file ini?')){ls.rm(KEY);state=clone(DATA);applyDrive(state);render()}}});
+else if(a==='reset'){if(confirm('Buang semua perubahan dan kembali ke isi file ini?')){localStorage.removeItem(KEY);state=clone(DATA);applyDrive(state);render()}}});
 $('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeDoc()});
 buildNav();if(innerWidth>820)setNav(true);
 render();show('home',true);
