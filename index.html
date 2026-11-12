@@ -217,11 +217,16 @@ body.editing .ed{outline-color:rgba(255,255,255,.7)}
 /* ===== Cetak: QR di samping foto + tata letak halaman ===== */
 .qr{display:none}
 @media print{
- .hg{grid-template-columns:auto 1fr auto!important;gap:24px!important}
- .qr{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;color:#10222c}
- .qr b{font-family:var(--fh);font-size:1.15rem;font-weight:700;color:#10222c}
- .qr img{width:120px;height:120px;display:block}
- .qr a{font-size:.78rem;color:#0f7a66;text-decoration:none;word-break:break-all}
+ .hg{display:grid!important;grid-template-columns:110px minmax(0,1fr) 96px!important;gap:14px!important;align-items:start!important}
+ .pf{width:110px}
+ .hg>div:nth-child(2){min-width:0}
+ h1{font-size:clamp(.8rem,2.1vw,1.05rem)!important;white-space:nowrap!important;letter-spacing:0;margin:8px 0 10px}
+ .mt div{grid-template-columns:78px 1fr;gap:8px}
+ .mt{font-size:.85rem}
+ .qr{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;color:#10222c}
+ .qr b{font-family:var(--fh);font-size:.95rem;font-weight:700;color:#10222c}
+ .qr img{width:84px;height:84px;display:block}
+ .qr a{font-size:.62rem;color:#0f7a66;text-decoration:none;word-break:break-all;line-height:1.2}
  #p-kp,#p-kemampuan,#p-hobi{break-before:page;page-break-before:always}
  .sh{break-after:avoid;page-break-after:avoid;margin-top:0}
  .kh{break-inside:avoid}
