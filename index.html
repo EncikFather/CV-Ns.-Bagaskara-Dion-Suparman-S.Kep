@@ -214,6 +214,21 @@ body::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w
 body.editing .ed{outline-color:rgba(255,255,255,.7)}
 @media print{.dl{color:#0f7a66;text-decoration:none}.sh,.ft,.mt dt,.mt dd,h1{color:#10222c!important;text-shadow:none}.lk{color:#0f7a66}.fill{background:#0f7a66!important}.bar{background:#dfe8e6}.ex .gt b{color:#5a4fcf}.rr{stroke:#cfd8d6}.ei,.rw{background:#f4f8f7}}
 @media print{:root{--bg:#fff;--glass:#fff;--bd:#cfd8d6;--tx:#10222c;--mut:#4a5e66;--cy:#0f7a66;--vi:#5a4fcf}body{background:#fff}.sd{clip-path:none!important}#tron,body::before,.sb,.bk,.top,.mbtn,.mn,.fab,.hint,.wv,.only-edit,.chip,#modal,.pf::before,.scr::after,.sl::after,.sl-i.dup{display:none!important}.mainc{margin:0!important}.pp{display:block!important;animation:none!important}.sl{overflow:visible}.sl-t{width:auto;flex-wrap:wrap;animation:none}.cd{backdrop-filter:none;break-inside:avoid}.fill{box-shadow:none}.rl{fill:#10222c}}
+/* ===== Cetak: QR di samping foto + tata letak halaman ===== */
+.qr{display:none}
+@media print{
+ .hg{grid-template-columns:auto 1fr auto!important;gap:24px!important}
+ .qr{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;color:#10222c}
+ .qr b{font-family:var(--fh);font-size:1.15rem;font-weight:700;color:#10222c}
+ .qr img{width:120px;height:120px;display:block}
+ .qr a{font-size:.78rem;color:#0f7a66;text-decoration:none;word-break:break-all}
+ #p-kp,#p-kemampuan,#p-hobi{break-before:page;page-break-before:always}
+ .sh{break-after:avoid;page-break-after:avoid;margin-top:0}
+ .kh{break-inside:avoid}
+ .gg{margin-top:12px}
+ .gg .cd,.hb,.hbg>*{break-inside:avoid;page-break-inside:avoid}
+ #radar svg,#radar-sk svg{max-height:260px}
+}
 </style>
 </head>
 <body>
@@ -289,6 +304,9 @@ const card=(t,b,c='',id='')=>`<section class="cd ${c}"${id?` id="${id}"`:''}><h2
 const pctCtl=(i,v)=>`<span class="only-edit pc"><input type="range" min="0" max="100" data-pct="${i}" value="${v||0}" aria-label="Nilai"><input type="number" min="0" max="100" data-pct="${i}" value="${v??''}" placeholder="–" aria-label="Nilai persen">%</span>`;
 const wave=k=>{let d=k?'M0 66':'M0 40',x=0;for(;x<1600;x+=200)d+=k?` L${x+40} 66 L${x+52} 22 L${x+120} 26 L${x+132} 66 L${x+200} 66`:` L${x+60} 40 L${x+70} 33 L${x+80} 40 L${x+100} 40 L${x+108} 48 L${x+118} 6 L${x+128} 62 L${x+134} 40 L${x+160} 40 L${x+176} 30 L${x+192} 40 L${x+200} 40`;return d};
 
+/* Kode QR "CV Online" (hanya tampil saat cetak / PDF) */
+const QR_IMG='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQAAAABRBrPYAAADGklEQVR42u2aQYrjZhCFv5IEvyBhZMhiVkE+wkAOIM8Bcoa5Qg4QkPoGuUHmADmEzFxE2s9CIln8IpLeLH51Z5p2d4uxA4H8tTN+7obnp1evqmxiR40JuyrC/mVYb2ZmlikBg7uGsx1hzKd8CW9ZE3n7dlghSTO2JMga7qzW+TgeAFJJUuTtMmw0y0HpYgB1C2UHUw7IzKLebgGzJQGZmqqlt1I+8rYLplTCZGZmlQacj7y9DCskH/RmUKuF3uwQRBhcMPL27bDRzCxD6WKCu4aqK7uiz4HQxSNvTyuj3LKqtH2kavu+GsYpd6liUr0JbLLMJCFrOFul8wHnWTIlMmK2vFDqigEnzbaaoFZTqaMcwPl0Dn6pIfL29HEe8MWUQ7BB4PxBMLz105LZkmKKz+kVsgQnSdIKaqilruwoPG7GVhB1lOWlGXCYchZLMIladoL+GN5NVyB252tgZV/Kk2rZpkLOVnXlcD/hrMQR+0KZ2KZpbMWoTe/rFhjf+um7KQNQDD/P2KAnlVYTUDeVum2+SbXaGm3wKno1FB43h+WY1FBJ6gr5GH5e5c35VGt4JaktJSl0Z0lRltc18b7wWxPHGggLjDF3/p/WE3l7AusPhZ/yVKuF1YSdqjDLTJZha9Tbi12GLVcTwrYGnKIN3oTecJgJqwlJbSVJChZqEtEtn7HBh3Ohgg3SH8eD825e0sUMxZXOVZsfJ7/FyJB+OkoNzjvNccR+6XH2uHlLQg1ULZTa7lkWw89zoVEPC50tMwa9gVOcZW7RxAHSbWNWS+ogaDVdTSI28cs2KEmBoq9sUB6n+wEn8nYFLPy4wpYEzEzhHHtwfjJLTIp3mQuVfa1QQ8D5VApGg3TKlKyyqLcXYQ+zM/1xLLc9T7gm/A8I8ftgn+U/7oAd1l8fu6Xu7bKllMKvUlL9rT9/v51bLj/+vPgdhPzyE59fh9lp1z9N9n4LfzV7YPM8P+7OK0hNrZayK4fC4yT5BJLXecu+59Ob5pE5XKp0hK7YtU7/YZfe9G6fLE/7YMMumP2x76/9tt0XXq14X/hPwL4ALRsQrh3R6LwAAAAASUVORK5CYII=';
+
 /* Navigasi sidebar: ikon disesuaikan dengan judul menu */
 const IC={
 home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>',
@@ -331,7 +349,7 @@ $('app').innerHTML=
 P('home',`<header class="hero" id="top"><div class="w hg">
 <div class="pf"><div class="ph">${p.photo?`<img src="${p.photo}" alt="Foto profil" referrerpolicy="no-referrer" data-act="viewp" data-p="profile.photo">`:'<svg viewBox="0 0 110 147" aria-label="Foto 3x4"><circle cx="55" cy="58" r="24" fill="rgba(61,245,200,.25)"/><path d="M12 128c0-30 18-42 43-42s43 12 43 42z" fill="rgba(61,245,200,.25)"/><text x="55" y="140" text-anchor="middle" font-size="9" fill="#8CA7B0">Foto 3x4</text></svg>'}</div></div>
 <div><p class="live"><i></i>${E('profile.role','Jabatan')}</p><h1>${E('profile.name','Nama lengkap')}</h1>
-<dl class="mt"><div><dt>Lahir</dt><dd>${E('profile.ttl','Kota, tanggal lahir')}</dd></div><div><dt>Domisili</dt><dd>${E('profile.dom','Alamat')}</dd></div><div><dt>Alamat KTP</dt><dd>${E('profile.ktp','Alamat KTP')}</dd></div><div><dt>Lulusan</dt><dd>${E('profile.lulus','Kampus')}</dd></div></dl></div></div>
+<dl class="mt"><div><dt>Lahir</dt><dd>${E('profile.ttl','Kota, tanggal lahir')}</dd></div><div><dt>Domisili</dt><dd>${E('profile.dom','Alamat')}</dd></div><div><dt>Alamat KTP</dt><dd>${E('profile.ktp','Alamat KTP')}</dd></div><div><dt>Lulusan</dt><dd>${E('profile.lulus','Kampus')}</dd></div></dl></div><div class="qr"><b>CV Online</b><img src="${QR_IMG}" alt="Kode QR CV Online"><a href="https://bit.ly/CV_Bagaskara">https://bit.ly/CV_Bagaskara</a></div></div>
 <div class="wv" aria-hidden="true"><div class="wvi">${[0,1].map(()=>`<svg width="1600" height="120" viewBox="0 0 1600 120"><path class="e" d="${wave(0)}"/><path class="c" transform="translate(0 52)" d="${wave(1)}"/></svg>`).join('')}</div></div></header>`)+
 P('profil',`<main class="w bento">
 ${card('Profil',`<p class="lead">${E('about','Tulis profil singkat')}</p>`,'c8')}
